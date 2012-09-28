@@ -180,8 +180,6 @@
 		1D3EDD71161061D30028E335 = {
 			isa = PBXGroup;
 			children = (
-				1D8BC71C161595DA0028C197 /* MessageUI.framework */,
-				1D8BC71A161595CF0028C197 /* ImageIO.framework */,
 				1D2756BF161454B700914A8E /* 3rd_party */,
 				1D3EDD86161061D30028E335 /* storyboard */,
 				1D3EDD7F161061D30028E335 /* Frameworks */,
@@ -200,6 +198,8 @@
 		1D3EDD7F161061D30028E335 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D8BC71C161595DA0028C197 /* MessageUI.framework */,
+				1D8BC71A161595CF0028C197 /* ImageIO.framework */,
 				1D2756B61614530600914A8E /* QuartzCore.framework */,
 				1D2756B4161452FD00914A8E /* CoreGraphics.framework */,
 				1D3EDD80161061D30028E335 /* UIKit.framework */,
