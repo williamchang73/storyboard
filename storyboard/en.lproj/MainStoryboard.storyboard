@@ -93,13 +93,32 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a03-yf-s85">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="269" id="5hH-Df-6tO"/>
+                                    <constraint firstAttribute="height" constant="84" id="vOv-xO-su6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Italy Trip 2012 / 09 / 28">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="neR-3m-V06" kind="modal" id="y8s-cg-h8u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="J9F-4J-7JP" firstAttribute="top" secondItem="7fk-5F-sqc" secondAttribute="top" type="default" id="1WS-UJ-vw3"/>
-                            <constraint firstItem="GcN-qz-fG1" firstAttribute="centerX" secondItem="J9F-4J-7JP" secondAttribute="centerX" type="default" id="Aty-WG-byG"/>
+                            <constraint firstItem="a03-yf-s85" firstAttribute="top" secondItem="7fk-5F-sqc" secondAttribute="top" constant="92" id="5PK-VL-GYJ"/>
+                            <constraint firstItem="GcN-qz-fG1" firstAttribute="centerX" secondItem="a03-yf-s85" secondAttribute="centerX" type="default" id="Ck9-SJ-vXj"/>
                             <constraint firstItem="J9F-4J-7JP" firstAttribute="trailing" secondItem="7fk-5F-sqc" secondAttribute="trailing" type="default" id="Dfh-fi-YO8"/>
                             <constraint firstItem="J9F-4J-7JP" firstAttribute="leading" secondItem="7fk-5F-sqc" secondAttribute="leading" type="default" id="RyB-cI-N1F"/>
+                            <constraint firstItem="a03-yf-s85" firstAttribute="centerX" secondItem="J9F-4J-7JP" secondAttribute="centerX" type="default" id="hO9-Zc-6li"/>
                             <constraint firstAttribute="bottom" secondItem="GcN-qz-fG1" secondAttribute="bottom" constant="14" id="zRV-T1-iPj"/>
                         </constraints>
                     </view>
@@ -140,6 +159,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLe-is-fWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="592" y="808"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ttw-68-ZZl">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="neR-3m-V06" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ovJ-68-NY6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2AL-sK-H22">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QlY-uK-KOQ" kind="relationship" relationship="rootViewController" id="FkB-Iw-rc0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="39R-T0-Jor" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="799"/>
+        </scene>
+        <!--DetailVC - Title-->
+        <scene sceneID="m4s-yz-hBi">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="QlY-uK-KOQ" customClass="DetailVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="" id="vE6-O0-nrb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xve-bV-q4r">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="4mX-7c-KPM"/>
+                                    <constraint firstAttribute="width" constant="127" id="Ghm-8X-pY1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="photo1l.jpg">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showImage:" destination="QlY-uK-KOQ" eventType="touchUpInside" id="DRI-Rd-MpC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4w1-At-8vD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="ZET-Rh-hxK"/>
+                                    <constraint firstAttribute="height" constant="227" id="h3B-Y8-XHT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="photo2l.jpg">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2Z-TB-Ycj">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="lDq-dU-Ayw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="photo3l.jpg">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yf-8h-YhG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="ekG-FF-ijU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="photo4l.jpg">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4w1-At-8vD" firstAttribute="leading" secondItem="5Yf-8h-YhG" secondAttribute="leading" type="default" id="3bl-lx-1kg"/>
+                            <constraint firstAttribute="trailing" secondItem="5Yf-8h-YhG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="C8I-uE-Y4o"/>
+                            <constraint firstItem="4w1-At-8vD" firstAttribute="top" secondItem="vE6-O0-nrb" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Cf5-GP-xnK"/>
+                            <constraint firstItem="xve-bV-q4r" firstAttribute="leading" secondItem="vE6-O0-nrb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZUj-j1-kJi"/>
+                            <constraint firstItem="u2Z-TB-Ycj" firstAttribute="trailing" secondItem="xve-bV-q4r" secondAttribute="trailing" type="default" id="gba-17-oc9"/>
+                            <constraint firstAttribute="bottom" secondItem="5Yf-8h-YhG" secondAttribute="bottom" constant="68" id="gec-gk-FjM"/>
+                            <constraint firstAttribute="trailing" secondItem="4w1-At-8vD" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hPb-3M-Q45"/>
+                            <constraint firstItem="u2Z-TB-Ycj" firstAttribute="leading" secondItem="vE6-O0-nrb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="l4v-dT-cmN"/>
+                            <constraint firstItem="u2Z-TB-Ycj" firstAttribute="top" secondItem="vE6-O0-nrb" secondAttribute="top" constant="204" id="mTG-Xl-vVi"/>
+                            <constraint firstItem="xve-bV-q4r" firstAttribute="top" secondItem="vE6-O0-nrb" secondAttribute="top" constant="20" symbolic="YES" type="default" id="pdR-Qx-igW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="pvb-Pf-fdS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="dmC-pD-DWJ">
+                            <connections>
+                                <action selector="dismissDetailView:" destination="QlY-uK-KOQ" id="KHd-rR-hIi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="no1-GG-ZPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1553" y="799"/>
         </scene>
         <!--ContainerVC-->
         <scene sceneID="lfN-00-hMf">
@@ -227,36 +354,12 @@
             <point key="canvasLocation" x="2029" y="14"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="ContainerVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContainerVC.h"/>
-        </class>
-        <class className="CreateVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateVC.h"/>
-            <relationships>
-                <relationship kind="action" name="dismissCreatation:"/>
-            </relationships>
-        </class>
-        <class className="FriendsVC" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FriendsVC.h"/>
-        </class>
-        <class className="MainVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainVC.h"/>
-            <relationships>
-                <relationship kind="action" name="showFriends:"/>
-                <relationship kind="action" name="showMenu:"/>
-            </relationships>
-        </class>
-        <class className="MenuVC" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuVC.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="liveallViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/liveallViewController.h"/>
-        </class>
-    </classes>
+    <resources>
+        <image name="photo1l.jpg" width="1024" height="681"/>
+        <image name="photo2l.jpg" width="681" height="1024"/>
+        <image name="photo3l.jpg" width="1024" height="681"/>
+        <image name="photo4l.jpg" width="681" height="1024"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
